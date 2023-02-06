@@ -2,8 +2,8 @@ name: Schedule trigger test
 run-name: ${{ github.actor }} is testing out GitHub Actions
 
 on:
-  schedule:
-    - cron: "15,45 */1 * * *"
+  # schedule:
+  #   - cron: "15,45 */1 * * *"
   workflow_dispatch:
 jobs:
   test_schedule:
