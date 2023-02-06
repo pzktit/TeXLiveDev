@@ -28,7 +28,7 @@ name: Build Docker image
 
 on:
   schedule:
-    - cron: '7 * * * *'
+    - cron: '7 16 * * *'
   push:
     tags: [ 'b*.*.*' , 'v*']
     branches: [ "release" ]

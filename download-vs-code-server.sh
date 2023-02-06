@@ -48,7 +48,7 @@ if [ -n "${commit_sha}" ]; then
     echo "will attempt to download VS Code Server version = '${commit_sha}'"
 
     # Download VS Code Server tarball to tmp directory.
-    curl -L "https://update.code.visualstudio.com/commit:${commit_sha}/server-linux-${ARCH}/stable" -o "/tmp/${archive}"
+    curl -s -L "https://update.code.visualstudio.com/commit:${commit_sha}/server-linux-${ARCH}/stable" -o "/tmp/${archive}"
 
     # Make the parent directory where the server should live.
     # NOTE: Ensure VS Code will have read/write access; namely the user running VScode or container user.
