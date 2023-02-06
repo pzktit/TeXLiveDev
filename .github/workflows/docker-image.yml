@@ -28,10 +28,10 @@ name: Build Docker image
 
 on:
   push:
+    schedule:
+      - cron: '5 12 * * *'
     tags: [ 'b*.*.*' , 'v*']
     branches: [ "release" ]
-    schedule:
-      - cron: '45 10 6 * *'
 # on:
 #   workflow_dispatch:
 
