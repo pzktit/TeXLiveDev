@@ -1,6 +1,6 @@
 {
 	"name": "TexLiveDev",
-	"image": "pzktit/texlivedev",
+	"image": "ghcr.io/pzktit/texlivedev",
 	// Add the IDs of extensions you want installed when the container is created.
 	"customizations": {
 	  "vscode": {

@@ -30,6 +30,8 @@ on:
   push:
     tags: [ 'b*.*.*' , 'v*']
     branches: [ "release" ]
+    schedule:
+      - cron: '45 10 6 * *'
 # on:
 #   workflow_dispatch:
 
