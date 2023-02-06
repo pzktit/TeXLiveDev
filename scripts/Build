@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker build . -t pzktit/texlivedev --no-cache --progress=plain  2>&1 | tee build.log
