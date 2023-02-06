@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions
 
 on:
   schedule:
-    - cron: "0,10,20,30,40,50 14,15,16,16 6,7 * 1,2,3,4,5"
+    - cron: "0,10,20,30,40,50 14,15,16,17 6,7 * 1,2,3,4,5"
 
 jobs:
   test_schedule:
