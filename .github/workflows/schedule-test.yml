@@ -1,0 +1,17 @@
+name: Schedule trigger test
+run-name: ${{ github.actor }} is testing out GitHub Actions
+
+on:
+  schedule:
+    - cron: '0,15,30,45 * * * 1,2,3,4,5'
+
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show time
+        run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+        run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+        run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+        run: echo "Action trigger time:"
+        run: echo ${{ steps.date.outputs.date }}
