@@ -11,9 +11,12 @@ RUN wget --quiet https://github.com/valentjn/ltex-ls/releases/download/15.2.0/lt
 WORKDIR /home/vscode
 USER vscode
 
-ADD download-vs-code-server.sh /home/vscode
-RUN sudo chmod a+x download-vs-code-server.sh && ./download-vs-code-server.sh
+ADD --chown=vscode:vscode download-vs-code-server.sh /home/vscode
+RUN chmod a+x download-vs-code-server.sh && ./download-vs-code-server.sh && rm -rf ./download-vs-code-server.sh && \
+  .vscode-server/bin/*/bin/code-server --install-extension "james-yu.latex-workshop" && \
+  .vscode-server/bin/*/bin/code-server --install-extension "valentjn.vscode-ltex" && \
+  rm -rf .vscode-server/bin/ && \
+  rm -rf .vscode-server/data
 
-RUN .vscode-server/bin/*/bin/code-server --install-extension "james-yu.latex-workshop" && \
-  .vscode-server/bin/*/bin/code-server --install-extension "valentjn.vscode-ltex"
+
 
