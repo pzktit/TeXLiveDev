@@ -42,5 +42,5 @@ jobs:
         context: .
         file: Dockerfile
         push: true
-        tags: latest,${{ steps.meta.outputs.tags }}
+        tags: ghcr.io/pzktit/texlivedev:latest,${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
