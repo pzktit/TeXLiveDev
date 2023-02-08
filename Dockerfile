@@ -12,7 +12,7 @@ WORKDIR /home/vscode
 USER vscode
 
 ADD --chown=vscode:vscode download-vs-code-server.sh /home/vscode
-RUN chmod a+x download-vs-code-server.sh && ./download-vs-code-server.sh && rm -rf ./download-vs-code-server.sh && \
+RUN chmod a+x download-vs-code-server.sh && ./download-vs-code-server.sh >/dev/null && rm -rf ./download-vs-code-server.sh && \
   .vscode-server/bin/*/bin/code-server --install-extension "james-yu.latex-workshop" && \
   .vscode-server/bin/*/bin/code-server --install-extension "valentjn.vscode-ltex" && \
   rm -rf .vscode-server/bin/ && \
