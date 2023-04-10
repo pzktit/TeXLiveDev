@@ -17,6 +17,3 @@ RUN chmod a+x download-vs-code-server.sh && ./download-vs-code-server.sh >/dev/n
   .vscode-server/bin/*/bin/code-server --install-extension "valentjn.vscode-ltex" && \
   rm -rf .vscode-server/bin/ && \
   rm -rf .vscode-server/data
-
-
-
