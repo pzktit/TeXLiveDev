@@ -4,9 +4,9 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"customizations": {
 	  "vscode": {
-//      "extensions": [
-//				"james-yu.latex-workshop",
-//				"valentjn.vscode-ltex"
+//      "extensions": [ 
+//				"james-yu.latex-workshop", # already installed in texlivedev image
+//				"valentjn.vscode-ltex" # already installed in texlivedev image
 //      ],
 			"settings": {
 				// General settings
