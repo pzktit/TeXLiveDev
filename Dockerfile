@@ -6,7 +6,7 @@ USER root
 WORKDIR /tmp
 
 RUN tlmgr update --self --all
-RUN wget --quiet https://github.com/valentjn/ltex-ls/releases/download/15.2.0/ltex-ls-15.2.0-linux-x64.tar.gz -P /tmp && tar xf /tmp/ltex-ls-15.2.0-linux-x64.tar.gz --strip-components=2 -C /usr --exclude={*.md,*.xml} && rm /tmp/ltex-ls*
+RUN wget --quiet https://github.com/valentjn/ltex-ls/releases/download/16.0.0/ltex-ls-16.0.0-linux-x64.tar.gz -P /tmp && tar xf /tmp/ltex-ls-16.0.0-linux-x64.tar.gz --strip-components=2 -C /usr --exclude={*.md,*.xml} && rm /tmp/ltex-ls*
 
 WORKDIR /home/vscode
 USER vscode
